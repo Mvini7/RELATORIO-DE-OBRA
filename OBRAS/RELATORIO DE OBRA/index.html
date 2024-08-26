@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Relatório de Obras</h1>
+        <form id="report-form">
+            <div class="form-group">
+                <label for="nome-obra">Nome da Obra:</label>
+                <input type="text" id="nome-obra" name="nome-obra" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+                <label for="local-obra">Local da Obra:</label>
+                <input type="text" id="local-obra" name="local-obra" required>
+            </div>
+            <div class="form-group">
+                <label for="modelo-obra">Modelo da Obra:</label>
+                <input type="text" id="modelo-obra" name="modelo-obra" required>
+            </div>
+            <div class="form-group">
+                <label for="estagio-obra">Estágio Percentual da Obra (%):</label>
+                <input type="number" id="estagio-obra" name="estagio-obra" min="0" max="100" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="foto-obra">Upload de Foto:</label>
+                <input type="file" id="foto-obra" name="foto-obra" accept="image/*">
+            </div>
+            <div class="form-group">
+                <input type="button" value="Gerar PDF" onclick="generatePDF()">
+                <input type="button" value="Baixar PDF" onclick="downloadPDF()">
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
